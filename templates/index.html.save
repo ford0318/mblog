@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>
+        Welcome to My Blog
+    </title>
+</head>
+<body>
+    <h1>
+        Welcome to My Blog!
+    </h1>
+    <hr>
+    {% for post in posts%}
+        <p style='font-family:Noto Serif TC;font-size:16pt;font-weight:bold;'>
+	   {{post.title}}
+        </p>
+        <p style='font-family:Noto Serif TC;font-size:16pt;font-weight:bold;'>
+           {{post.title}}
+        </p>        
+    <hr>
+    <h3>Time:{{now}}</h3>
+</body>
+</html>

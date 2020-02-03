@@ -1,0 +1,15 @@
+<!-- post.html-->
+{% extends 'base.html' %}
+{% block title%}
+    {{post.title}} - AI世界
+{% endblock%}
+{% block headmessage%}
+    <h3 style='font-family:Noto Serif TC;'>{{post.title}}</h3>
+    <a style='font-family:Noto Serif TC;' href='/'>回首頁</a>
+{% endblock %}
+{% block content%}
+    <p style='font-family:Noto Serif TC;font-size:12pt;letter-spacing:2pt;'>
+        {{post.body}}
+    </p>
+{% endblock %}
+

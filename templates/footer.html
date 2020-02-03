@@ -1,0 +1,8 @@
+<!-- footer.html-->
+{% block footer %}
+    {% if now %}
+    <p style='font-family:Noto Serif TC;'>現在時刻:{{now}}</p>
+    {% else %}
+    <p style='font-family:Noto Serif TC;'></p>
+    {% endif %}
+{% endblock%}
