@@ -5,11 +5,29 @@
     <h3 style='font-family:Noto Serif TC'>本站文章列表</h3>
 {% endblock %}
 {% block content %}
-    {% for post in posts%}
-        <p style='font-family:Noto Serif TC;font-size:16pt;font-weight:bold;'>
-	        <a href='/post/{{post.slug}}'> {{post.title}}</a>
-        </p>        
-    {% endfor %}
+{% for post in posts%}
+   
+	<div class='panel panel-success'>
+	    <div class='panel-heading' style='background-color:#ffffdd';>  
+		<p style='font-family:Noto Serif TC;font-size:16pt;font-weight:bold;'>
+	            <a href='/post/{{post.slug}}'> {{post.title}}</a>
+		</p>
+	    </div>
+	    <div class='panel-body' style="background-color:#efefef">
+	        <p style='font-family:Noto Serif TC;font-size:12pt;'>
+		    {{post.body | truncatechars:40 }}
+	        </p>
+	    </div>
+	    <div class='panel-footer' style='background-color:#ffffdd;'>
+		<p style='font-size:12pt;color:#5E5E5E'> 
+		    發布時間：{{ post.pub_date | date:"Y M d,h:m:s"}}
+		</p>
+	    </div>
+ 	</div>
+	<br>
+{% endfor %}
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-cb1e1982-11a5-471f-a9ab-0fa62b1b0ccc" style='margin: 0px auto;'></div>
 {% endblock%}
 
     
